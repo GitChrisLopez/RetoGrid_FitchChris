@@ -1,0 +1,74 @@
+:root {
+  --background: #c4ebfa;
+  --green-blue: #03bfb1;
+  --green: #33c361;
+  --lime: #6edb6e;
+  --blue: #0f98c6;
+  --dark-blue: #005b92;
+  --blue-green: #03bfb1;
+}
+
+body {
+  background-color: var(--background);
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  gap: 15px;
+  padding: 10px;
+  align-items: center;
+  margin: auto;
+  width: 70%;
+  color: #fff;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aside content content"
+    "aside section section"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container > div {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: var(--green-blue);
+  height: 50px;
+  grid-area: header;
+}
+
+.navigation {
+  background-color: var(--green);
+  height: 50px;
+  grid-area: nav;
+}
+
+.aside {
+  background-color: var(--lime);
+  height: 50vh;
+  grid-area: aside;
+}
+
+.content {
+  background-color: var(--blue);
+  height: 20vh;
+  grid-area: content;
+}
+
+.section {
+  background-color: var(--dark-blue);
+  height: 20vh;
+  grid-area: section;
+}
+
+.footer {
+  background-color: var(--blue-green);
+  height: 50px;
+  grid-area: footer;
+}
