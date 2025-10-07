@@ -19,7 +19,7 @@ body {
   padding: 10px;
   align-items: center;
   margin: auto;
-  width: 70%;
+  width: 65%;
   color: #fff;
   grid-template-areas:
     "header header header"
@@ -28,10 +28,14 @@ body {
     "aside section section"
     "footer footer footer";
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 70px 70px auto auto 70px;
 }
 
 .container > div {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
@@ -57,13 +61,15 @@ body {
 
 .content {
   background-color: var(--blue);
-  height: 20vh;
+  min-height: 200px;
+  height: auto;
   grid-area: content;
 }
 
 .section {
   background-color: var(--dark-blue);
-  height: 20vh;
+  min-height: 200px;
+  height: auto;
   grid-area: section;
 }
 
